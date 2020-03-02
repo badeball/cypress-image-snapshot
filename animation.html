@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<style>
+  body > div {
+    width: 200px;
+    height: 200px;
+    background: blue;
+  }
+
+  div > div {
+    width: 0%;
+    height: 100%;
+    background: green;
+    transition: width 2s, height 4s;
+  }
+
+  div > div.visible {
+    width: 100%;
+  }
+</style>
+<div><div /></div>
+<script>
+  setTimeout(() => {
+    document.querySelector('div > div').setAttribute('class', 'visible');
+  }, 1000);
+</script>

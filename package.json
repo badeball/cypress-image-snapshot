@@ -14,7 +14,7 @@
   "scripts": {
     "prebuild": "rimraf *.js",
     "build": "babel src --out-dir .",
-    "test": "jest",
+    "test": "jest && cypress run",
     "lint": "eslint src",
     "prepublish": "npm run build"
   },
